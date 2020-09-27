@@ -5,7 +5,7 @@ function h($str){
     ENT_QUOTES, "UTF-8");
 }
 
-
+function constellation($month, $day){
     $signs = [
         # 星座の名前          /星座始まりの月日            /星座終わりの月日  
         ["name" => "牡羊座", "period_start" => [3, 21], "period_end" => [4, 19]],
@@ -22,22 +22,26 @@ function h($str){
         ["name" => "魚座", "period_start" => [2, 19], "period_end" => [3, 20]]
     ];
 
+
+
+   foreach($signs as $sign){
     $start_m = $sign["period_start"][0];
     $start_d = $sign["period_start"][1];
     $end_m   = $sign["period_end"][0];
-    $end_m   = $sign["period_end"][1];
+    $end_d   = $sign["period_end"][1];
 
-   foreach($signs as $sign){
-    if(($start_m == $month and $start_d <= $day) or
-        ( $end_m == $month && $end_m >= $day)) {
-           $result = $sign["name"];
+    if($month == $start_m && $start_d <= $day) {
+        return $sign["name"];
+    }elseif($month == $end_m && $day <= $end_d) {
+        return $sign["name"];
     }
+
    }
+}
 
 $month = filter_input(INPUT_GET, "month", FILTER_VALIDATE_INT);
 $day = filter_input(INPUT_GET, "day", FILTER_VALIDATE_INT);
-
-
+$sign = constellation($month, $day);
 
 ?>
 
@@ -58,7 +62,7 @@ $day = filter_input(INPUT_GET, "day", FILTER_VALIDATE_INT);
         </from>
 
     <?php else : ?>
-        <p><?= h($month) . "月" . h($day) . "日生まれは" . $result . "です。"; ?></p>
+        <p><?= h($month) . "月" . h($day) . "日生まれは" . $sign . "です。"; ?></p>
     <?php endif; ?>    
     </body>
 </html>
