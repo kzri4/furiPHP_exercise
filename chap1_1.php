@@ -1,4 +1,3 @@
-
 <?php
 
 //講師の名前を表示
@@ -8,4 +7,3 @@ $teacher = trim(fgets(STDIN));
 var_dump("本日の講師は" . $teacher . "です");
 
 ?>
-

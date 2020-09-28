@@ -12,10 +12,10 @@ $msg = <<< EOM
     {$owner["name"]}さんは
     {$animal}を
     {$count}匹買っています。
-
 EOM;
 
-echo $msg;
-
+    echo $msg;
+    
 }
 
+?>

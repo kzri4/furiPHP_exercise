@@ -1,5 +1,13 @@
 <?php
 
+function add($item1, $item2, $item3){
+    return $item1 + $item2 + $item3;
+}
+
+function totalTax($sum){
+    return floor($sum * 1.1);
+}
+
 function displayMsg($name,$sum,$price){
 
     $msg=<<<EOM
@@ -14,8 +22,3 @@ echo $msg;
 }
 
 ?>
-
-
-
-
-
