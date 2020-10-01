@@ -2,6 +2,7 @@
 
 function displayMsg($top, $bottom, $height, $area){
     $msg = <<< EOM
+    
 \n台形のサイズ
 上辺:{$top}
 下辺:{$bottom}

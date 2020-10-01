@@ -6,11 +6,11 @@ function displayMsg($owner) {
     $animal = implode("、",$animal_type);
     $count = count($owner["animal"]);
 
-$msg = <<< EOM
-
-    {$owner["name"]}さんは
-    {$animal}を
-    {$count}匹買っています。
+    $msg = <<< EOM
+    
+{$owner["name"]}さんは
+{$animal}を
+{$count}匹買っています。
 EOM;
 
     echo $msg;
