@@ -7,7 +7,6 @@ function displayMsg($owner) {
     $count = count($owner["animal"]);
 
     $msg = <<< EOM
-    
 {$owner["name"]}さんは
 {$animal}を
 {$count}匹買っています。
