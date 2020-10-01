@@ -1,6 +1,6 @@
 <?php
 
-function displayMsg($top, $bottom, $height, $area){
+function displayMsg($top, $bottom, $height, $area) {
     $msg = <<< EOM
 \n台形のサイズ
 上辺:{$top}
@@ -11,7 +11,7 @@ EOM;
     echo $msg;
 }
 
-function calcArea($top, $bottom, $height){
+function calcArea($top, $bottom, $height) {
     return ($top + $bottom) * $height / 2;
 }
 
