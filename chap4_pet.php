@@ -1,11 +1,10 @@
 <?php
 
-function displayMSG($owner){
+function displayMsg($owner) {
 
     $animal_type = array_unique($owner["animal"]);
     $animal = implode("、",$animal_type);
     $count = count($owner["animal"]);
-
 
 $msg = <<< EOM
 
@@ -15,7 +14,6 @@ $msg = <<< EOM
 EOM;
 
     echo $msg;
-    
 }
 
 ?>

@@ -13,3 +13,4 @@ $owners = [
 foreach ($owners as $owner) {
     displayMsg($owner);
 }
+?>
