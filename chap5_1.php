@@ -50,31 +50,30 @@ $sign = constellation($month, $day);
 <head>
 
     <title>星座アプリ</title>
-    <h1>星座チェック</h1>
-
+    
 </head>
 
 <body>
 
-<?php 
-if (empty($month or $day)) :   
-?>
+    <h1>星座チェック</h1>
 
-    <p>数字を入力してください</p>
-    
-    <form method="get">
+    <?php if (empty($month or $day)): ?>
 
-        <label>月日</label>:
+        <p>数字を入力してください</p>
 
-        <input name="month" min="1" max="12" type="number">月
-        <input name="day" min="1" max="31" type="number">日
-        <input type="submit" value="OK">
+        <form method = "get">
 
-        </from>
+            <label>月日</label>:
 
-    <?php else : ?>
-        <p><?= h($month) . "月" . h($day) . "日生まれは" . $sign . "です。"; ?></p>
-    <?php endif; ?>
+            <input name  = "month" min = "1" max = "12" type = "number">月
+            <input name = "day" min = "1" max= "31" type = "number">日
+            <input type = "submit" value = "OK">
+
+            </from>
+
+        <?php else: ?> 
+            <p><?= h($month) . "月" . h($day) . "日生まれは" . $sign . "です。"; ?></p>
+        <?php endif; ?>
 
 </body>
 
