@@ -1,6 +1,6 @@
 <?php
 
-require_once('chap4_price.php');
+require_once __DIR__ . "/chap4_price.php";
 
 var_dump("お名前は");
 $name = trim(fgets(STDIN));

@@ -1,6 +1,6 @@
 <?php
 
-require_once('chap4_area.php');
+require_once __DIR__ . "/chap4_area.php";
 
 $top = 10;
 $bottom = 20;

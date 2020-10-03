@@ -17,7 +17,7 @@ function displayMsg($name,$sum,$price) {
 {$price} 円（税込）になります。
 EOM;
 
-echo $msg;
+    echo $msg;
 }
 
 ?>
