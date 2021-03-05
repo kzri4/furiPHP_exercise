@@ -9,5 +9,4 @@ $teams = [
 
 foreach ($teams as $team) {
     createMsg ($team["member"], $team["enemy"],  $team["attack_point"]);
-
 }
