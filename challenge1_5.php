@@ -3,17 +3,17 @@
 $HP = 10000;
 $attack_methods = [1 => "剣", 2 => "魔法", 3 => "打撃"];
 
-do {
-    echo "攻撃法は？\n";
+while ($HP >= 0) {
+    echo "攻撃技は？\n";
 
     foreach ($attack_methods as $select => $method) {
         echo $select . "." . $method . " ";
     }
 
     echo "\n";
-    $num = trim(fgets(STDIN));
+    $input_number = trim(fgets(STDIN));
 
-    switch ($num) {
+    switch ($input_number) {
         case 1:
         case 2:
         case 3:
@@ -33,9 +33,8 @@ do {
             echo "攻撃に失敗\n";
             break;
     }
-} while ($HP >= 0);
+}
 
 if ($HP <= 0) {
     echo "敵を倒した!\n";
 }
-

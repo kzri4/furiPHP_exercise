@@ -6,5 +6,9 @@ $team_c = ["スライム", "ドラゴン", "魔王"];
 $all_teams = [$team_a, $team_b, $team_c];
 
 foreach ($all_teams as $team) {
-    echo $team[0] . "\n" . $team[1] . "\n" . $team[2] . "\n";
+    $cnt = count($team);
+    $team_number = $cnt - $cnt;
+    for ($i = $team_number; $i < $cnt; $i++) {
+        echo $team[$i]. "\n"; 
+    }
 }

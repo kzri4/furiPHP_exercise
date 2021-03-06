@@ -15,6 +15,6 @@ EOM;
 }
 
 function getDamage ($attack_point) {
-    $select =  rand(100,500);
-    return $select * $attack_point;
+    $damage_variable =  rand(100,500);
+    return $damage_variable  * $attack_point;
 }
