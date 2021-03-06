@@ -1,12 +1,10 @@
 <?php
 
-function h($str)
-{
+function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
 }
 
-function constellation($month, $day)
-{
+function constellation($month, $day) {
     $signs = [
         # 星座の名前          /星座始まりの月日            /星座終わりの月日  
         ["name" => "牡羊座", "period_start" => [3, 21], "period_end" => [4, 19]],
@@ -22,7 +20,6 @@ function constellation($month, $day)
         ["name" => "水瓶座", "period_start" => [1, 20], "period_end" => [2, 18]],
         ["name" => "魚座", "period_start" => [2, 19], "period_end" => [3, 20]]
     ];
-
 
 
     foreach ($signs as $sign) {

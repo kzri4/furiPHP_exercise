@@ -1,9 +1,9 @@
 <?php
 
-$HP = 10000;
+$hp = 10000;
 $attack_methods = [1 => "剣", 2 => "魔法", 3 => "打撃"];
 
-while ($HP >= 0) {
+while ($hp > 0) {
     echo "攻撃技は？\n";
 
     foreach ($attack_methods as $select => $method) {
@@ -18,16 +18,16 @@ while ($HP >= 0) {
         case 2:
         case 3:
             $atack_point = rand(500,3000);
-            echo "攻撃力 " . $atack_point ." の攻撃!\n";
+            echo "攻撃力 " . $atack_point . " の攻撃!\n";
             if ($atack_point >= 2000) {
                 echo "クリティカルヒット!!\n";
             }
-            $HP = $HP - $atack_point;
-            if ($HP <= 0) {
-                echo "HP: " . 0 . "\n";
-                break;
+            if ($hp - $atack_point < 0) {
+                $hp = 0;
+            } else {
+                $hp = $hp - $atack_point;
             }
-            echo "HP: " . $HP . "\n";
+            echo "HP: " . $hp . "\n";
             break;
         default:
             echo "攻撃に失敗\n";
@@ -35,6 +35,6 @@ while ($HP >= 0) {
     }
 }
 
-if ($HP <= 0) {
+if ($hp <= 0) {
     echo "敵を倒した!\n";
 }

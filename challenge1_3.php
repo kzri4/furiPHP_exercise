@@ -7,8 +7,7 @@ $all_teams = [$team_a, $team_b, $team_c];
 
 foreach ($all_teams as $team) {
     $cnt = count($team);
-    $team_number = $cnt - $cnt;
-    for ($i = $team_number; $i < $cnt; $i++) {
+    for ($i = 0; $i < $cnt; $i++) {
         echo $team[$i]. "\n"; 
     }
 }
